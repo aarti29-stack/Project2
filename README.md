@@ -24,9 +24,9 @@ Shows IEEE **9-bus**, **118-bus**, and **1354-bus (PEGASE)** test systems to:
 ---
 ## Key Analysis & Checks
 - Bus Results (`net.res_bus`)
- vm_pu – voltage magnitude (p.u.)
- p_mw – active power injection (negative = generation, positive = load)
- q_mvar – reactive power injection
+\\n vm_pu – voltage magnitude (p.u.)
+ \\n p_mw – active power injection (negative = generation, positive = load)
+\\n  q_mvar – reactive power injection
 
 - Line Results (`net.res_line`)
  p_from_mw, p_to_mw – directional flows
