@@ -61,4 +61,8 @@ print("\n The 118-bus test network",net2)
 # Plot of net2
 plot.simple_plot(net2, show_plot=False)  # don't auto-show inside simple_plot
 
+# Add a title
+plt.figtext(0.5, 0.01, "This is the visualisation of the 118 bus network.", ha='center', fontsize=12)
+
+
 plt.show()
