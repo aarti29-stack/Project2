@@ -18,7 +18,7 @@ Shows IEEE **9-bus**, **118-bus**, and **1354-bus (PEGASE)** test systems to:
   - load IEEE test cases from `pandapower.networks`
   - run `pp.runpp(net)` (power flow)
   - analyze `net.res_bus`, `net.res_line`
-  - plot networks (9, 118, 1354 bus)
+  - plot networks (9, 118, 1354pegase bus)
   - overload visualization 
 
 ---

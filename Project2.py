@@ -56,13 +56,26 @@ print("\n Total active power losses (MW):", net.res_line['pl_mw'].sum())
 net2 = pn.case118()
 
 # it is more convenient to visualie the results in graphs, of big networks
-print("\n The 118-bus test network",net2)
+print("\n 118-bus test -",net2)
 
 # Plot of net2
 plot.simple_plot(net2, show_plot=False)  # don't auto-show inside simple_plot
 
 # Add a title
 plt.figtext(0.5, 0.01, "This is the visualisation of the 118 bus network.", ha='center', fontsize=12)
-
-
 plt.show()
+
+# plot the powerflow results of the simple system. we already ran the power flow simulation. 
+# Plot of net
+plot.simple_plot(net, show_plot=False)  # don't auto-show inside simple_plot
+plt.figtext(0.5, 0.01, "This is the visualisation of the 9 bus network.", ha='center', fontsize=12)
+plt.show() 
+
+# load the network
+net3 = pn.case1354pegase()
+
+# run the power flow computation
+pp.runpp(net3)
+plot.simple_plot(net3, show_plot=False)  # don't auto-show inside simple_plot
+plt.figtext(0.5, 0.01, "This is the visualisation of the case1354pegase bus network.", ha='center', fontsize=12)
+plt.show() 
