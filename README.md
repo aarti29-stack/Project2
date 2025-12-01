@@ -19,7 +19,7 @@ Shows IEEE **9-bus**, **118-bus**, and **1354-bus (PEGASE)** test systems to:
   - run `pp.runpp(net)` (power flow)
   - analyze `net.res_bus`, `net.res_line`
   - plot networks (9, 118, 1354pegase bus)
-  - overload visualization 
+  - performs **Overload Visualization** to highlight bottlenecks. 
 
 ---
 ## Key Analysis & Checks
@@ -32,3 +32,10 @@ Shows IEEE **9-bus**, **118-bus**, and **1354-bus (PEGASE)** test systems to:
   - p_from_mw, p_to_mw – directional flows
   - pl_mw – active power loss per line
   - loading_percent – thermal loading (bottleneck indicator)
+   - - *Logic:* If `loading_percent > 100%`, the line is flagged as **OVERLOADED**.
+
+## Power Balance Logic
+The script automatically verifies if the grid is balanced:
+```python
+if total_power_balance > 0:
+    print("Result: More power is CONSUMED than produced.")   
