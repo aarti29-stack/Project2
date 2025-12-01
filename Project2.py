@@ -79,3 +79,14 @@ pp.runpp(net3)
 plot.simple_plot(net3, show_plot=False)  # don't auto-show inside simple_plot
 plt.figtext(0.5, 0.01, "This is the visualisation of the case1354pegase bus network.", ha='center', fontsize=12)
 plt.show() 
+
+# --- BONUS: GRID OVERLOAD ANALYSIS ---
+print("\n--- Overload Check ---")
+# Filter for lines where loading is > 100%
+overloaded_lines = net.res_line[net.res_line.loading_percent > 100]
+
+if not overloaded_lines.empty:
+    print(f"Warning: {len(overloaded_lines)} lines are overloaded!")
+    print(overloaded_lines[['loading_percent']])
+else:
+    print("Success: No lines are overloaded. Grid is stable.")
