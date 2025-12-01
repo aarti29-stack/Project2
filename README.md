@@ -32,7 +32,7 @@ Shows IEEE **9-bus**, **118-bus**, and **1354-bus (PEGASE)** test systems to:
   - p_from_mw, p_to_mw – directional flows
   - pl_mw – active power loss per line
   - loading_percent – thermal loading (bottleneck indicator)
-   - - *Logic:* If `loading_percent > 100%`, the line is flagged as **OVERLOADED**.
+   - *Logic:* If `loading_percent > 100%`, the line is flagged as **OVERLOADED**.
 
 ## Power Balance Logic
 The script automatically verifies if the grid is balanced:
